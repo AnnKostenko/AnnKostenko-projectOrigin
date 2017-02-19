@@ -1,0 +1,214 @@
+/*Подключение шрифтов*/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed');
+@font-face {
+	font-family: Elz;
+	src: url('../Fonts/Elz.ttf');
+}
+
+
+/*Создание анимации*/
+
+@keyframes Text_color {
+	from {
+		color: black;
+	}
+	to {
+		color: red;
+	}
+}
+
+
+/*Вид страницы*/
+
+.main_page {
+	margin: 0 auto;
+	height: 100%;
+	width: 1000px;
+	background: linear-gradient(to bottom left, #fff, #fdbea2);
+	position: relative;
+	padding: 4px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-image: url(../image/pattern2.png);
+}
+
+
+/*Характеристика заголовка страницы*/
+
+h2 {
+	margin-left: 100px;
+	margin-top: 15px;
+	font-size: 50px;
+	font-family: Elz;
+	width: 175px;
+	text-align: center;
+}
+
+
+/*Меню*/
+
+table {
+	border-collapse: collapse;
+	background: linear-gradient(to bottom left, #fff, #fdbea2);
+	border: 2px solid #fdbea2;
+	width: 1000px;
+	margin-left: -4px;
+	margin-top: 30px;
+}
+
+tr {
+	line-height: 50px;
+}
+
+td {
+	width: 300px;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+}
+
+td a {
+	text-decoration: none;
+	color: red;
+}
+
+
+/*Вид пункта меню, при наведении на него*/
+
+td a:hover {
+	color: black;
+}
+
+
+/*Кликабельность и размещение логотипа*/
+
+a img,
+#Logo {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	left: 10px;
+	border-radius: 100%;
+	border: 10px solid white;
+}
+
+
+/*Характеристика и анимация текста "Акция!"*/
+
+#stock {
+	position: absolute;
+	left: 600px;
+	top: 27px;
+	font-size: 16px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	animation-name: Text_color;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+span {
+	font-size: 30px;
+	font-family: Elz;
+	font-weight: 700;
+}
+
+
+/*Размер и харкатеристика всего поля, в котором размещены характеристики заказа*/
+
+.fon {
+	width: 300px;
+	height: 400px;
+	margin-top: 30px;
+	border-radius: 20px;
+	background: linear-gradient(to bottom left, #fff, bisque);
+	border: 2px solid grey;
+	box-shadow: 5px 5px 5px grey;
+}
+
+
+/*Характеристика поля с заказом*/
+
+.head {
+	width: 296.4px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background-color: bisque;
+	text-align: center;
+	line-height: 50px;
+	font-family: cursive;
+	font-size: 35px;
+	border-bottom: 2px solid grey;
+}
+
+ul.Lists>li.First {
+	margin-top: 15px;
+}
+
+ul.Lists>li {
+	list-style-type: none;
+	line-height: 55px;
+	text-align: center;
+	border-bottom: 1px solid grey;
+	border-top: 1px solid grey;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 30px;
+}
+
+input[type="button"] {
+	width: 296.4px;
+	text-align: center;
+	line-height: 50px;
+	background-color: bisque;
+	font-family: cursive;
+	font-size: 35px;
+	margin-top: 50px;
+	border: 1px solid grey;
+}
+
+#fon {
+	margin-top: -400px;
+	margin-left: 345px;
+}
+
+#fon1 {
+	margin-top: -400px;
+	margin-left: 690px;
+}
+
+
+/*Вид кнопки "Заказать" при нажатии*/
+
+input[type="button"]:active {
+	background: linear-gradient(to top right, #fff, bisque);
+}
+
+
+/*Размер и размещение линии*/
+
+hr {
+	width: 1000px;
+	margin-left: -4px;
+	margin-top: 20px;
+}
+
+
+/*Вид текста, о разработчике проекта*/
+
+#Develop {
+	text-align: center;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 22px;
+}

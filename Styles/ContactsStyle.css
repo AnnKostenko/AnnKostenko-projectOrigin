@@ -1,0 +1,290 @@
+/*Подключение шрифтов*/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed');
+@font-face {
+	font-family: Elz;
+	src: url('../Fonts/Elz.ttf');
+}
+
+
+/*Создание анимации*/
+
+@keyframes Text_color {
+	from {
+		color: black;
+	}
+	to {
+		color: red;
+	}
+}
+
+
+/*Вид страницы*/
+
+.main_page {
+	margin: 0 auto;
+	height: 100%;
+	width: 1000px;
+	background: linear-gradient(to bottom left, #fff, #fdbea2);
+	position: relative;
+	padding: 4px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-image: url(../image/pattern2.png);
+}
+
+
+/*Характеристика заголовка страницы*/
+
+h2 {
+	margin-left: 100px;
+	margin-top: 15px;
+	font-size: 50px;
+	font-family: Elz;
+	width: 260px;
+	text-align: center;
+}
+
+
+/*Кликабельность и размещение логотипа*/
+
+a img,
+#Logo {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	left: 10px;
+	border-radius: 100%;
+	border: 10px solid white;
+}
+
+
+/*Меню*/
+
+table {
+	border-collapse: collapse;
+	background: linear-gradient(to bottom left, #fff, #fdbea2);
+	border: 2px solid #fdbea2;
+	width: 1000px;
+	margin-left: -4px;
+	margin-top: 30px;
+}
+
+tr {
+	line-height: 50px;
+}
+
+td {
+	width: 300px;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+}
+
+td a {
+	text-decoration: none;
+	color: red;
+}
+
+
+/*Вид пункта меню, при  наведении на него*/
+
+td a:hover {
+	color: black;
+}
+
+
+/*Характеристика и анимация текста "Акция!"*/
+
+#stock {
+	position: absolute;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	left: 600px;
+	top: 27px;
+	font-size: 16px;
+	animation-name: Text_color;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+span {
+	font-size: 30px;
+	font-family: Elz;
+	font-weight: 700;
+}
+
+
+/*Характеристика заголовка "Звоните"*/
+
+h3 {
+	margin-top: 30px;
+	width: 220px;
+	font-size: 60px;
+	color: red;
+	font-family: Elz;
+	margin-left: 50px;
+	animation-name: Text_color;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+
+/*Параметры телефонных номеров*/
+
+#phone_numbers {
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 30px;
+	width: 250px;
+	margin-left: 50px;
+}
+
+
+/*Характеристика ссылки "Напишите в ВК"*/
+
+#link_VK {
+	position: absolute;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 30px;
+	color: red;
+	left: 50px;
+	width: 200px;
+	font-weight: 600;
+	top: 451px;
+	text-decoration: none;
+	height: 43px;
+}
+
+i.material-icons {
+	font-size: 40px;
+	position: absolute;
+	left: 155px;
+}
+
+
+/*Характеристика текста "Заполните поля и т.д."*/
+
+#Forms {
+	position: absolute;
+	top: 220px;
+	width: 400px;
+	font-size: 30px;
+	left: -150px;
+	color: red;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	margin-left: 635px;
+}
+
+
+/*Характеристика поля "Введите Ваше имя"*/
+
+input[type="text"] {
+	margin-left: 650px;
+	margin-top: 50px;
+	line-height: 35px;
+	border-radius: 5px;
+	font-size: 16px;
+	font-family: cursive;
+}
+
+input#text1 {
+	margin-top: -100px;
+}
+
+
+/*Характеристика лейблов "Введите Ваш номер и т.д."*/
+
+input[type="text"]+label {
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 22px;
+	margin-left: -355px;
+}
+
+
+/*Характеристика ссылки "Моя группа в ВК"*/
+
+#link_groupVK {
+	position: absolute;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 30px;
+	color: red;
+	left: 50px;
+	width: 205px;
+	font-weight: 600;
+	top: 549px;
+	text-decoration: none;
+}
+
+
+/*Вид кнопки "Отправить"*/
+
+#Send {
+	position: absolute;
+	margin-top: 130px;
+	width: 120px;
+	height: 30px;
+	margin-left: 15px;
+	border-radius: 5px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 20px;
+	background: linear-gradient(to bottom left, white, #fdbea2);
+	border: 1px solid black;
+}
+
+
+/*Вид кнопки при нажатии на нее*/
+
+#Send:active {
+	background: linear-gradient(to top left, white, #fdbea2);
+}
+
+
+/*Характеристика знака в "ВК"*/
+
+img#VK {
+	border-radius: 0;
+	border: 0;
+	width: 35px;
+	height: 35px;
+	margin-top: 145px;
+	margin-left: 210px;
+}
+
+img#VK1 {
+	border-radius: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	margin-top: 70px;
+	margin-left: 220px;
+}
+
+
+/*Вид текста, о разработчике проекта*/
+
+#Develop {
+	text-align: center;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 22px;
+}
+
+
+/*Размер и размещение линии*/
+
+hr {
+	width: 1000px;
+	margin-left: -4px;
+	margin-top: 130px;
+}

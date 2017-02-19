@@ -1,0 +1,344 @@
+/*Подключение шрифтов*/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed');
+@font-face {
+	font-family: Elz;
+	src: url('../Fonts/Elz.ttf');
+}
+
+
+/*Создание анимации*/
+
+@keyframes Text_color {
+	from {
+		color: black;
+	}
+	to {
+		color: red;
+	}
+}
+
+
+/*Вид страницы*/
+
+.main_page {
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+	background: linear-gradient(to bottom left, #fff, #fdbea2);
+	position: relative;
+	padding: 4px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-image: url(../image/pattern2.png);
+}
+
+
+/*Характеристика заголовка основной страницы*/
+
+h2 {
+	margin-top: 10px;
+	margin-left: 95px;
+	font-size: 50px;
+	font-family: Elz;
+	width: 500px;
+	text-align: center;
+}
+
+
+/*Меню*/
+
+table {
+	border-collapse: collapse;
+	background: linear-gradient(to bottom left, #fff, #fdbea2);
+	border: 2px solid #fdbea2;
+	width: 1000px;
+	margin-left: -4px;
+	margin-top: 30px;
+}
+
+tr {
+	line-height: 50px;
+}
+
+td {
+	width: 300px;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+}
+
+td a {
+	text-decoration: none;
+	color: red;
+}
+
+
+/*Вид пункта меню, при наведении на него*/
+
+td a:hover {
+	color: black;
+}
+
+
+/*Характеристика и анимация текста "Акция!"*/
+
+#stock {
+	position: absolute;
+	left: 600px;
+	top: 27px;
+	font-size: 16px;
+	animation-name: Text_color;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+span {
+	font-size: 30px;
+	font-family: Elz;
+	font-weight: 700;
+}
+
+
+/*Кликабельность и размещение логотипа*/
+
+a img,
+#Logo {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	border-radius: 100%;
+	border: 10px solid white;
+}
+
+
+/*Параметры поля, в котором находится сам слайдер*/
+
+div>div#content {
+	width: 1000px;
+	height: 500px;
+}
+
+
+/*Подключение изображений для слайдера*/
+
+#img9 {
+	background-image: url('../ImageSlider/img9.jpg');
+}
+
+#img10 {
+	background-image: url('../ImageSlider/img10.jpg');
+}
+
+#img11 {
+	background-image: url('../ImageSlider/img11.jpg');
+}
+
+#img12 {
+	background-image: url('../ImageSlider/img12.jpg');
+}
+
+#img13 {
+	background-image: url('../ImageSlider/img13.jpg');
+}
+
+#img14 {
+	background-image: url('../ImageSlider/img14.jpg');
+}
+
+#img15 {
+	background-image: url('../ImageSlider/img15.jpg');
+}
+
+#img16 {
+	background-image: url('../ImageSlider/img16.jpg');
+}
+
+
+/*Характеристика самого слайдера, в обычном состоянии*/
+
+div#content>div[id="img9"] {
+	background-size: 650px 450px;
+	width: 650px;
+	height: 450px;
+	border: 10px solid white;
+	border-radius: 20px;
+	visibility: hidden;
+	opacity: 0;
+	margin-top: 25px;
+	margin-left: 165px;
+}
+
+div#content>div[id="img10"],
+div[id="img11"],
+div[id="img12"],
+div[id="img13"],
+div[id="img14"],
+div[id="img15"],
+div[id="img16"] {
+	background-size: 650px 450px;
+	width: 650px;
+	height: 450px;
+	border: 10px solid white;
+	border-radius: 20px;
+	visibility: hidden;
+	opacity: 0;
+	margin-top: -450px;
+	margin-left: 165px;
+}
+
+
+/*Замена изображений  и плавный преход, при нажатии на "radio"*/
+
+div#content>input[name="Slide"]:checked+div {
+	border-radius: 20px;
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 2s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+
+/*Скрытие обычных радио-кнопок */
+
+input[type="radio"] {
+	display: none;
+}
+
+
+/*Вид радио-кнопок, когда элемент выбран*/
+
+input#image9:checked~label[for="image9"],
+input#image10:checked~label[for="image10"],
+input#image11:checked~label[for="image11"],
+input#image12:checked~label[for="image12"],
+input#image13:checked~label[for="image13"],
+input#image14:checked~label[for="image14"],
+input#image15:checked~label[for="image15"],
+input#image16:checked~label[for="image16"] {
+	border: 4px solid white;
+	background-color: #fdbea2;
+}
+
+
+/*Вид радио-кнопок*/
+
+label[for="image9"],
+label[for="image10"],
+label[for="image11"],
+label[for="image12"],
+label[for="image13"],
+label[for="image14"],
+label[for="image15"],
+label[for="image16"] {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -350px;
+	left: 180px;
+	border-radius: 100%;
+	border: 4px solid #fdbea2;
+	background-color: white;
+	margin-bottom: 15px;
+}
+
+
+/*Характеристика текста "Фотографирую по всей Украине" и т.д.*/
+
+p#text1 {
+	width: 300px;
+	color: red;
+	margin-left: 10px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+p#text2 {
+	width: 300px;
+	margin-top: 30px;
+	margin-left: 100px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 22px;
+	color: red;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+p#text3 {
+	width: 300px;
+	margin-top: 30px;
+	margin-left: 350px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 22px;
+	color: red;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+p#text4 {
+	width: 300px;
+	margin-top: -110px;
+	margin-left: 600px;
+	line-height: 30px;
+	text-align: center;
+	color: red;
+	font-size: 22px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+p#text5 {
+	width: 300px;
+	margin-top: -102px;
+	margin-left: 690px;
+	line-height: 30px;
+	color: red;
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+
+/*Характеристика обращения фотографа*/
+
+#Text {
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 40px;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+
+/*Вид текста, о разработчике проекта*/
+
+#Develop {
+	text-align: center;
+	font-family: 'Fira Sans Extra Condensed', sans-serif;
+	font-size: 22px;
+}
+
+
+/*Размер и размещение линии*/
+
+hr {
+	width: 1000px;
+	margin-left: -4px;
+}
